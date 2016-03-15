@@ -1,0 +1,41 @@
+<ion-navbar *navbar favorite>
+    <ion-title>个人资料配置</ion-title>
+</ion-navbar>
+
+<ion-content padding class="page-profile">
+    <ion-list>
+        <ion-list-header>基本资料</ion-list-header>
+        <ion-item>
+            <ion-label fixed>姓名</ion-label>
+            <ion-input type="text" value="王小明" placeholder="你的姓名"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>生日</ion-label>
+            <ion-input type="date" value="1970-01-01"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>性別</ion-label>
+            <ion-select [(ngModel)]="gender">
+                <ion-option value="male" checked="true">男</ion-option>
+                <ion-option value="female">女</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>身高</ion-label>
+            <ion-input type="number" value="160.4" placeholder="空"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>目標體重</ion-label>
+            <ion-input type="number" value="60.4" placeholder="空"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>通知</ion-label>
+            <ion-toggle checked="false"></ion-toggle>
+        </ion-item>
+    </ion-list>
+</ion-content>
