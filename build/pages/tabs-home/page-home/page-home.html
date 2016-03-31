@@ -14,12 +14,14 @@
     <ion-list>
         <ion-item>
             <ion-avatar item-left>
-                <img src="img/avatar-default-male.png">
+                <img src="{{ userProfile.headimgurl }}" alt="avatar">
             </ion-avatar>
-            <h1>王小明</h1>
+            <h1>{{ userProfile.nickname }}</h1>
             <p>次要资讯</p>
         </ion-item>
+    </ion-list>
 
+    <ion-list>
         <ion-list-header><b>身体数据</b></ion-list-header>
 
         <ion-item>
@@ -36,6 +38,10 @@
             </ion-avatar>
             <h1>体脂肪</h1>
             <p>22.4 %</p>
+        </ion-item>
+
+        <ion-item>
+            <h2>isOnWeixin: {{ isOnWeixin }}</h2>
         </ion-item>
     </ion-list>
 </ion-content>
