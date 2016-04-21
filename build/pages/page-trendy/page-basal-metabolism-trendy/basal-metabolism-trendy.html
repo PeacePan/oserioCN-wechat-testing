@@ -1,0 +1,24 @@
+<ion-navbar *navbar favorite>
+    <ion-title>{{ strs.Menu.PersonalHealthCenter }}</ion-title>
+</ion-navbar>
+
+<ion-content padding class="trendy-page page-basal-metabolism-trendy">
+    <ion-list>
+        <ion-list-header>{{ strs.Title.DataRecord }}:</ion-list-header>
+
+        <ion-item class="text-center trendy-area has-border-radius">
+            <h1>施工中</h1>
+            <!-- <canvas id="body_fat_trendy"></canvas> -->
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-list-header>{{ strs.Menu.KnowledgeStation }}</ion-list-header>
+
+        <ion-item class="text-center knowledge-buttons has-border-radius">
+            <ion-buttons>
+                <button clear *ngFor="#p of pages" (click)="routing.openPage(p)">{{ p.title }}</button>
+          </ion-buttons>
+        </ion-item>
+    </ion-list>
+</ion-content>

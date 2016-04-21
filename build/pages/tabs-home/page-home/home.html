@@ -1,0 +1,123 @@
+<ion-content padding class="page-home">
+    <ion-list class="user-avatar">
+        <ion-item class="has-border-radius">
+            <ion-avatar item-left>
+                <img src="{{ userProfile.headimgurl }}" alt="avatar">
+            </ion-avatar>
+            <h1>{{ userProfile.nickname }}</h1>
+            <p><ion-icon name="male"></ion-icon>　28{{ strs.Noun.YearsOld }}　172cm</p>
+        </ion-item>
+    </ion-list>
+
+
+    <ion-list class="body-analysis">
+        <ion-list-header>{{ strs.Title.BodyAnalysis }}:</ion-list-header>
+
+        <ion-item class="text-center body-score has-border-radius">
+            <h1>施工中</h1>
+        </ion-item>
+    </ion-list>
+
+    <ion-list class="alldata-table">
+        <ion-list-header>{{ strs.Title.DataTable }}:</ion-list-header>
+        <ion-item class="has-border-radius">
+            <ion-row>
+                <ion-col width-25>{{ strs.Noun.MeasurementName }}</ion-col>
+                <ion-col width-25>{{ strs.Noun.MeasurementResult }}</ion-col>
+                <ion-col width-20>{{ strs.Noun.AnalyzingHealth }}</ion-col>
+                <ion-col width-30>{{ strs.Noun.DataRecordLookup }}</ion-col>
+            </ion-row>
+
+            <ion-row class="watch-row">
+                <ion-col offset-70>
+                    <ion-icon name="play" (click)="openWeightTrendy()"></ion-icon>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col width-25 [innerHTML]="dbt.weight.name"></ion-col>
+                <ion-col width-25 [innerHTML]="dbt.weight.value + dbt.weight.unit"></ion-col>
+                <ion-col width-20 [innerHTML]="dbt.weight.judgeText"></ion-col>
+                <ion-col width-30 class="none-top-bottom-border">&nbsp;</ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col width-25 [innerHTML]="dbt.BMI.name"></ion-col>
+                <ion-col width-25 [innerHTML]="dbt.BMI.value"></ion-col>
+                <ion-col width-20 [innerHTML]="dbt.BMI.judgeText"></ion-col>
+                <ion-col width-30 class="none-top-bottom-border">&nbsp;</ion-col>
+            </ion-row>
+            
+            <ion-row>
+                <ion-col width-25 [innerHTML]="dbt.boneMass.name"></ion-col>
+                <ion-col width-25 [innerHTML]="dbt.boneMass.value + dbt.boneMass.unit"></ion-col>
+                <ion-col width-20 [innerHTML]="dbt.boneMass.judgeText"></ion-col>
+                <ion-col width-30 class="none-top-bottom-border">&nbsp;</ion-col>
+            </ion-row>
+            
+            <ion-row>
+                <ion-col width-25 [innerHTML]="dbt.muscleMass.name"></ion-col>
+                <ion-col width-25 [innerHTML]="dbt.muscleMass.value + dbt.muscleMass.unit"></ion-col>
+                <ion-col width-20 [innerHTML]="dbt.muscleMass.judgeText"></ion-col>
+                <ion-col width-30 class="none-top-bottom-border">&nbsp;</ion-col>
+            </ion-row>
+
+            <ion-row class="watch-row">
+                <ion-col offset-70>
+                    <ion-icon name="play" (click)="openBodyFatTrendy()"></ion-icon>
+                </ion-col>
+            </ion-row>
+            
+            <ion-row>
+                <ion-col width-25 [innerHTML]="dbt.bodyWater.name"></ion-col>
+                <ion-col width-25 [innerHTML]="dbt.bodyWater.value + dbt.bodyWater.unit"></ion-col>
+                <ion-col width-20 [innerHTML]="dbt.bodyWater.judgeText"></ion-col>
+                <ion-col width-30 class="none-top-bottom-border">&nbsp;</ion-col>
+            </ion-row>
+            
+            <ion-row>
+                <ion-col width-25 [innerHTML]="dbt.bodyFat.name"></ion-col>
+                <ion-col width-25 [innerHTML]="dbt.bodyFat.value + dbt.bodyFat.unit"></ion-col>
+                <ion-col width-20 [innerHTML]="dbt.bodyFat.judgeText"></ion-col>
+                <ion-col width-30 class="none-top-bottom-border">&nbsp;</ion-col>
+            </ion-row>
+            
+            <ion-row>
+                <ion-col width-25 [innerHTML]="dbt.visceralFat.name"></ion-col>
+                <ion-col width-25 [innerHTML]="dbt.visceralFat.value + dbt.visceralFat.value"></ion-col>
+                <ion-col width-20 [innerHTML]="dbt.visceralFat.judgeText"></ion-col>
+                <ion-col width-30 class="none-top-bottom-border">&nbsp;</ion-col>
+            </ion-row>
+            
+            <ion-row>
+                <ion-col width-25 [innerHTML]="dbt.metabolicAge.name"></ion-col>
+                <ion-col width-25 [innerHTML]="dbt.metabolicAge.value + dbt.metabolicAge.unit"></ion-col>
+                <ion-col width-20 [innerHTML]="dbt.metabolicAge.judgeText"></ion-col>
+                <ion-col width-30 class="none-top-bottom-border">&nbsp;</ion-col>
+            </ion-row>
+
+            <ion-row class="watch-row bottom">
+                <ion-col offset-70>
+                    <ion-icon name="play" (click)="openBasalMetabolismTrendy()"></ion-icon>
+                </ion-col>
+            </ion-row>
+            
+            <ion-row>
+                <ion-col width-25 [innerHTML]="dbt.basalMetabolism.name"></ion-col>
+                <ion-col width-25 [innerHTML]="dbt.basalMetabolism.value + dbt.basalMetabolism.unit"></ion-col>
+                <ion-col width-20 [innerHTML]="dbt.basalMetabolism.judgeText"></ion-col>
+                <ion-col width-30>&nbsp;</ion-col>
+            </ion-row>
+            
+
+            <!-- <ion-row *ngFor="#table of dataTable">
+                <ion-col width-25>{{ table.name }}</ion-col>
+                <ion-col width-25>{{ table.value }}{{ table.unit }}</ion-col>
+                <ion-col width-20>{{ table.judgeText }}</ion-col>
+                <ion-col width-30>&nbsp;</ion-col>
+            </ion-row> -->
+
+            <p class="text-center">{{ strs.Noun.Date }}: 2016/3/18</p>
+        </ion-item>
+    </ion-list>
+</ion-content>

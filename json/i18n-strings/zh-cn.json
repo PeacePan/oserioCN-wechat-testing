@@ -1,0 +1,128 @@
+{
+    "Menu": {
+        "MyOserio": "我的欧瑟若",
+        "Social": "活动社群",
+        "WeixinMarket": "微信小店",
+        "OnlineDocument": "线上引导文件",
+        "KnowledgeStation": "知识小站",
+
+        "PersonalHealthCenter": "个人健康中心",
+        "DeviceUpdateCenter": "设备更新中心",
+        "PersonalProfile": "个人资料设置"
+    },
+
+    "Noun": {
+        "Name": "姓名",
+        "Menu": "菜单",
+        "Back": "返回",
+        "Date": "日期",
+
+        "Height": "身高",
+        "Weight": "体重",
+        "GoalWeight": "目标体重",
+        "MuscleMass": "肌肉量",
+        "BMI": "BMI",
+        "BoneMass": "骨量",
+        "BodyWater": "水份率",
+        "HumanBody": "人体",
+        "BasalMetabolism": "基础代谢",
+        "BodyFat": "体脂肪率",
+        "VisceralFat": "内脏脂肪率",
+        "MetabolicAge": "体年龄",
+        "BodyFatMass": "脂肪量",
+
+        "Birthday": "生日",
+        "Male": "男性",
+        "Female": "女性",
+        "MaleShort": "男",
+        "FemaleShort": "女",
+        "Gender": "性別",
+        "Age": "年龄",
+        "Kilocalorie": "大卡",
+        "YearsOld": "岁",
+
+        "Judge": "判定",
+        "Level": "等级",
+        "LevelUnit": "级",
+
+        "WorkLevel": "工作程度",
+        "WorkContent": "工作內容",
+
+        "LightWork": "轻简工作",
+        "ModerateWork": "中度工作",
+        "HeavyWork": "重度工作",
+
+        "MeasurementName": "测量名称",
+        "MeasurementResult": "测量结果",
+        "AnalyzingHealth": "健康判断",
+        "DataRecordLookup": "数据纪录查询"
+    },
+
+    "Knowledge": {
+        "MuscleMassIntro": "肌肉量介绍",
+        "MuscleMassIntroCtn": "　　肌肉量就是身体中肌肉所占的比例，是保持势及维持心脏跳动的组织。",
+
+        "BMIIntro": "BMI介绍",
+        "BMIIntroCtn": "　　BMI称为身体质量指数 <span>(Body Mass Index)</span>利用身高为基础来测量体重是否符合标准，目前为国际上通用评估胖瘦的方式",
+
+        "BoneMassIntro": "骨量介绍",
+        "BoneMassIntroCtn": "　　骨量即人体中的「骨矿物量」，而骨矿物量是人体骨质密度的基础。而由骨矿物量的重量，可推估骨质密度的好坏。通过「骨矿物量」的自我量测统计，若发现重量有减少现象时，可进而推估骨质密度可能有流失，继而需要更加重视预防持续流失。",
+
+        "BodyWaterIntro": "水份率介绍",
+        "BodyWaterIntroCtn": "　　水份率是人体中水份所占的百分比，水份是只体内含水分的血液、淋巴液细胞外液、细胞内液等。",
+
+        "BasalMetabolismIntro": "人体基础代谢介绍",
+        "BasalMetabolismIntroCtn": "　　基础代谢是人体热量消耗的主要途径，约占人体总热量消耗的65%-70%，而且人体基础代谢会随着年龄的增长，而有下降的趋势，一般来说，人在婴儿时期的代谢率相当高，到了孩童时期会快速下降，等到成人期又会逐渐趋于稳定。",
+
+        "BodyFatIntro": "体脂肪率介绍",
+        "BodyFatIntroCtn": "　　体脂肪率是指“人体脂肪”与“体重”的百分比，但体脂肪和体重没有绝对关系，因为人很轻，且看起来也很瘦，但是体脂肪却很高，若是这样就潜伏着健康危机。",
+
+        "VisceralFatIntro": "内脏脂肪介绍",
+        "VisceralFatIntroCtn": "　　体脂肪与内脏脂肪的多少与罹患一些糖尿病、高血压、高血脂、冠心病等慢性疾病的风险有着强烈的相关性。",
+
+        "MetabolicAgeIntro": "体年龄介绍",
+        "MetabolicAgeIntroCtn": "　　体年龄是基于基础代谢率的估算，且考虑其人体体组成成分与WHO (世界卫生组织)所订定肥胖程度等因素综合所呈现的数值，用以判断与受测者实际年龄的差异。如：人体体组成中的肌肉量高则基础代谢量高，其呈现的体年龄相较于实际年龄会较少；反之，如受测者的体组成体脂肪较高，其呈现的体年龄相较于实际年龄会较高。",
+        "MetabolicAgeDesc": "实际年龄30岁，体重相同的人体"
+    },
+
+    "Title": {
+        "BodyAnalysis": "体型分析",
+        "DataTable": "数据总表",
+        "DataRecord": "数据纪录表",
+        "KnowledgeList": "知识列表",
+        "JudgeStandard": "判定标准",
+        "JudgeMethodStandard": "判定方法及标准",
+        "ObesityDecisionTable": "肥胖判定表",
+        "BasicInformation": "基本资料",
+        "BasicInformationConfig": "基本资料设置",
+
+        "CalorieCal": "热量计算",
+        "WorkClassifyDescription": "依工作程度分类的热量需要量表"
+    },
+
+    "Judge": {
+        "Slim": "偏瘦",
+        "Normal": "正常",
+        "Standard": "标准",
+        "Fat": "偏胖",
+        "SuperFat": "超胖",
+
+        "Low": "偏低",
+        "High": "偏高",
+        "Exorbitant": "过高"
+    },
+
+    "Content": {
+        "CalorieCalFormulaMain1": "每日热量需要量=",
+        "CalorieCalFormulaMain2": "现有体重 (公斤) <b>X<b> 热量需要量 (大卡/公斤)",
+        "CalorieCalFormulaSub1": "减重期每日热量需要量=",
+        "CalorieCalFormulaSub2": "现有体重 (公斤) <b>X<b> 热量需要量 (大卡/公斤) - 500大卡",
+        
+        "CalorieRequest": "热量需要量 (大卡/公斤)",
+        "LightWorkDescription": "家务或<br/>办公桌工作者",
+        "ModerateWorkDescription": "工作需要经常<br/>走动但不粗重",
+        "HeavyWorkDescription": "挑石、搬运等<br/>重度工作",
+
+        "YourName": "你的姓名"
+    }
+}

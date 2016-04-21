@@ -1,0 +1,53 @@
+<ion-navbar *navbar favorite>
+    <ion-title>{{ strs.Knowledge.BoneMassIntro }}</ion-title>
+</ion-navbar>
+
+<ion-content padding class="knowledge page-bone-mass-intro">
+    <ion-card class="intro-content">
+        <ion-card-header>
+            <div class="intro-title">
+                <a><img src="img/icon-temp.png"></a>
+                <span>{{ strs.Knowledge.BoneMassIntro }}:</span>
+            </div>
+        </ion-card-header>
+        <ion-card-content [innerHTML]="strs.Knowledge.BoneMassIntroCtn"></ion-card-content>
+    </ion-card>
+
+    <ion-card class="std-content">
+        <ion-card-header>{{ strs.Title.JudgeStandard }}:</ion-card-header>
+        
+        <ion-card-content>
+            <div class="group-title">{{ strs.Noun.Male }}:</div>
+            <ion-item>
+                <ion-row class="judge-row">
+                    <ion-col width-67>{{ strs.Noun.Weight }} < 60kg</ion-col>
+                    <ion-col width-33>{{ strs.Noun.BoneMass }} 2.5kg</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-67>60kg ≦ {{ strs.Noun.Weight }} ≦ 75kg</ion-col>
+                    <ion-col width-33>{{ strs.Noun.BoneMass }} 2.9kg</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-67>{{ strs.Noun.Weight }} > 75kg</ion-col>
+                    <ion-col width-33>{{ strs.Noun.BoneMass }} 3.2kg</ion-col>
+                </ion-row>
+            </ion-item>
+
+            <div class="group-title">{{ strs.Noun.Female }}:</div>
+            <ion-item>
+                <ion-row class="judge-row">
+                    <ion-col width-67>{{ strs.Noun.Weight }} < 45kg</ion-col>
+                    <ion-col width-33>{{ strs.Noun.BoneMass }} 1.8kg</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-67>45kg ≦ {{ strs.Noun.Weight }} ≦ 60kg</ion-col>
+                    <ion-col width-33>{{ strs.Noun.BoneMass }} 2.2kg</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-67>{{ strs.Noun.Weight }} > 60kg</ion-col>
+                    <ion-col width-33>{{ strs.Noun.BoneMass }} 2.5kg</ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

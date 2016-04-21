@@ -1,0 +1,84 @@
+<ion-navbar *navbar favorite>
+    <ion-title>{{ strs.Knowledge.BodyFatIntro }}</ion-title>
+</ion-navbar>
+
+<ion-content padding class="knowledge page-body-fat-intro">
+    <ion-card class="intro-content">
+        <ion-card-header>
+            <div class="intro-title">
+                <a><img src="img/icon-temp.png"></a>
+                <span>{{ strs.Knowledge.BodyFatIntro }}:</span>
+            </div>
+        </ion-card-header>
+        <ion-card-content [innerHTML]="strs.Knowledge.BodyFatIntroCtn"></ion-card-content>
+    </ion-card>
+
+    <ion-card class="std-content">
+        <ion-card-header>{{ strs.Title.JudgeStandard }}:</ion-card-header>
+        
+        <ion-card-content>
+            <ion-item>
+                <ion-row class="judge-row header-title">
+                    <ion-col width-20>{{ strs.Noun.Gender }}</ion-col>
+                    <ion-col width-16>{{ strs.Noun.Age }}</ion-col>
+                    <ion-col width-16>{{ strs.Judge.Low }}</ion-col>
+                    <ion-col width-16>{{ strs.Judge.Standard }}</ion-col>
+                    <ion-col width-16>{{ strs.Judge.High }}</ion-col>
+                    <ion-col width-16>{{ strs.Judge.Exorbitant }}</ion-col>
+                </ion-row>
+
+                <!-- 男性體脂肪率資料 -->
+                <ion-row class="judge-row">
+                    <ion-col width-20 class="none-bottom-border">&nbsp;</ion-col>
+                    <ion-col width-16 class="span-center"><span>10-33{{ strs.Noun.YearsOld }}</span></ion-col>
+                    <ion-col width-16><span>5%<br/>~<br/>8.5%</span></ion-col>
+                    <ion-col width-16><span>8.6%<br/>~<br/>19.3%</span></ion-col>
+                    <ion-col width-16><span>19.4%<br/>~<br/>25.0%</span></ion-col>
+                    <ion-col width-16><span>25.1%<br/>~<br/>50.0%</span></ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-20 class="none-top-bottom-border span-center"><span>{{ strs.Noun.Male }}</span></ion-col>
+                    <ion-col width-16 class="span-center"><span>34-49{{ strs.Noun.YearsOld }}</span></ion-col>
+                    <ion-col width-16><span>5%<br/>~<br/>11.7%</span></ion-col>
+                    <ion-col width-16><span>11.8%<br/>~<br/>22.5%</span></ion-col>
+                    <ion-col width-16><span>22.6%<br/>~<br/>27.6%</span></ion-col>
+                    <ion-col width-16><span>27.7%<br/>~<br/>50.0%</span></ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-20 class="none-top-border">&nbsp;</ion-col>
+                    <ion-col width-16 class="span-center"><span>50-80{{ strs.Noun.YearsOld }}</span></ion-col>
+                    <ion-col width-16><span>5%<br/>~<br/>13.7%</span></ion-col>
+                    <ion-col width-16><span>13.8%<br/>~<br/>24.5%</span></ion-col>
+                    <ion-col width-16><span>24.6%<br/>~<br/>30.2%</span></ion-col>
+                    <ion-col width-16><span>30.3%<br/>~<br/>50.0%</span></ion-col>
+                </ion-row>
+
+                <!-- 女性體脂肪率資料 -->
+                <ion-row class="judge-row">
+                    <ion-col width-20 class="none-bottom-border">&nbsp;</ion-col>
+                    <ion-col width-16 class="span-center"><span>10-33{{ strs.Noun.YearsOld }}</span></ion-col>
+                    <ion-col width-16><span>5%<br/>~<br/>20.8%</span></ion-col>
+                    <ion-col width-16><span>20.9%<br/>~<br/>32.5%</span></ion-col>
+                    <ion-col width-16><span>32.6%<br/>~<br/>38.2%</span></ion-col>
+                    <ion-col width-16><span>38.3%<br/>~<br/>50.0%</span></ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-20 class="none-top-bottom-border span-center"><span>{{ strs.Noun.Female }}</span></ion-col>
+                    <ion-col width-16 class="span-center"><span>34-49{{ strs.Noun.YearsOld }}</span></ion-col>
+                    <ion-col width-16><span>5%<br/>~<br/>23.4%</span></ion-col>
+                    <ion-col width-16><span>23.5%<br/>~<br/>35.1%</span></ion-col>
+                    <ion-col width-16><span>35.2%<br/>~<br/>40.8%</span></ion-col>
+                    <ion-col width-16><span>40.9%<br/>~<br/>50.0%</span></ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-20 class="none-top-border">&nbsp;</ion-col>
+                    <ion-col width-16 class="span-center"><span>50-80{{ strs.Noun.YearsOld }}</span></ion-col>
+                    <ion-col width-16><span>5%<br/>~<br/>24.4%</span></ion-col>
+                    <ion-col width-16><span>24.5%<br/>~<br/>36.1%</span></ion-col>
+                    <ion-col width-16><span>36.2%<br/>~<br/>41.8%</span></ion-col>
+                    <ion-col width-16><span>41.9%<br/>~<br/>50.0%</span></ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

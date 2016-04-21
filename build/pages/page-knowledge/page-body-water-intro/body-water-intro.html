@@ -1,0 +1,53 @@
+<ion-navbar *navbar favorite>
+    <ion-title>{{ strs.Knowledge.BodyWaterIntro }}</ion-title>
+</ion-navbar>
+
+<ion-content padding class="knowledge page-body-water-intro">
+    <ion-card class="intro-content">
+        <ion-card-header>
+            <div class="intro-title">
+                <a><img src="img/icon-temp.png"></a>
+                <span>{{ strs.Knowledge.BodyWaterIntro }}:</span>
+            </div>
+        </ion-card-header>
+        <ion-card-content [innerHTML]="strs.Knowledge.BodyWaterIntroCtn"></ion-card-content>
+    </ion-card>
+
+    <ion-card class="std-content">
+        <ion-card-header>{{ strs.Title.JudgeStandard }}:</ion-card-header>
+        
+        <ion-card-content>
+            <div class="group-title">{{ strs.Noun.Male }}:</div>
+            <ion-item>
+                <ion-row class="judge-row">
+                    <ion-col width-67>{{ strs.Noun.BodyWater }} < 55%</ion-col>
+                    <ion-col width-33>{{ strs.Judge.Fat }}</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-67>55% ≦ {{ strs.Noun.BodyWater }} ≦ 65%</ion-col>
+                    <ion-col width-33>{{ strs.Judge.Standard }}</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-67>{{ strs.Noun.BodyWater }} > 65%</ion-col>
+                    <ion-col width-33>{{ strs.Judge.Slim }}</ion-col>
+                </ion-row>
+            </ion-item>
+
+            <div class="group-title">{{ strs.Noun.Female }}:</div>
+            <ion-item>
+                <ion-row class="judge-row">
+                    <ion-col width-67>{{ strs.Noun.Weight }} < 45%</ion-col>
+                    <ion-col width-33>{{ strs.Judge.Fat }}</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-67>45% ≦ {{ strs.Noun.Weight }} ≦ 60%</ion-col>
+                    <ion-col width-33>{{ strs.Judge.Standard }}</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-67>{{ strs.Noun.BodyWater }} > 60%</ion-col>
+                    <ion-col width-33>{{ strs.Judge.Slim }}</ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

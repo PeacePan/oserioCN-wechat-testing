@@ -1,0 +1,20 @@
+<ion-content class="page-devices">
+    <ion-list>
+        <ion-item-sliding #deviceSliding *ngFor="#device of devices; #i = index">
+            <ion-item>
+                <ion-thumbnail item-left>
+                    <img src="{{ device.pictureUrl }}" (load)="showGestureSliding(i, deviceSliding)">
+                </ion-thumbnail>
+                <h2>{{ device.name }}</h2>
+                <p>{{ device.stateText }}</p>
+                <button clear item-right>查看</button>
+            </ion-item>
+            <ion-item-options>
+                <button primary>
+                    <ion-icon name="close-circle"></ion-icon>
+                    解除绑定
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>

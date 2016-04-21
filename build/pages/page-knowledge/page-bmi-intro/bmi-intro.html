@@ -1,0 +1,51 @@
+<ion-navbar *navbar favorite>
+    <ion-title>{{ strs.Knowledge.BMIIntro }}</ion-title>
+</ion-navbar>
+
+<ion-content padding class="knowledge page-bmi-intro">
+    <ion-card class="intro-content">
+        <ion-card-header>
+            <div class="intro-title">
+                <a><img src="img/icon-temp.png"></a>
+                <span>{{ strs.Knowledge.BMIIntro }}:</span>
+            </div>
+        </ion-card-header>
+        <ion-card-content [innerHTML]="strs.Knowledge.BMIIntroCtn"></ion-card-content>
+    </ion-card>
+
+    <ion-card class="std-content">
+        <ion-card-header>{{ strs.Title.JudgeMethodStandard }}:</ion-card-header>
+        
+        <ion-card-content>
+            <ion-item class="bmi-formula">
+                <div class="formula left">{{ strs.Noun.BMI }}=</div>
+                <div class="formula right">
+                    <div>{{ strs.Noun.Weight }} (<span>kg</span>)</div>
+                    <div>{{ strs.Noun.Height }} (m<span>2</span>)</div>
+                </div>
+            </ion-item>
+
+            <ion-item>
+                <ion-row class="judge-row">
+                    <ion-col width-100>{{ strs.Title.ObesityDecisionTable }}</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-25>{{ strs.Judge.Slim }}</ion-col>
+                    <ion-col width-75>≦ 18.4</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-25>{{ strs.Judge.Normal }}</ion-col>
+                    <ion-col width-75>18.5 ~ 23.9</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-25>{{ strs.Judge.Fat }}</ion-col>
+                    <ion-col width-75>24 ~ 26.9</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-25>{{ strs.Judge.SuperFat }}</ion-col>
+                    <ion-col width-75>≧ 27</ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

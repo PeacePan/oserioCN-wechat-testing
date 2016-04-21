@@ -1,0 +1,43 @@
+<ion-navbar *navbar favorite>
+    <ion-title>{{ strs.Knowledge.VisceralFatIntro }}</ion-title>
+</ion-navbar>
+
+<ion-content padding class="knowledge page-visceral-fat-intro">
+    <ion-card class="intro-content">
+        <ion-card-header>
+            <div class="intro-title">
+                <a><img src="img/icon-temp.png"></a>
+                <span>{{ strs.Knowledge.VisceralFatIntro }}:</span>
+            </div>
+        </ion-card-header>
+        <ion-card-content [innerHTML]="strs.Knowledge.VisceralFatIntroCtn"></ion-card-content>
+    </ion-card>
+
+    <ion-card class="std-content">
+        <ion-card-header>{{ strs.Title.JudgeStandard }}:</ion-card-header>
+        
+        <ion-card-content>
+            <ion-item>
+                <ion-row class="judge-row">
+                    <ion-col offset-25 width-25>{{ strs.Noun.Level }}</ion-col>
+                    <ion-col width-25>{{ strs.Noun.Judge }}</ion-col>
+                </ion-row>
+
+                <ion-row class="judge-row">
+                    <ion-col offset-25 width-25>1-3</ion-col>
+                    <ion-col width-25>{{ strs.Judge.Standard }}</ion-col>
+                </ion-row>
+
+                <ion-row class="judge-row">
+                    <ion-col offset-25 width-25>4-6</ion-col>
+                    <ion-col width-25>{{ strs.Judge.High }}</ion-col>
+                </ion-row>
+
+                <ion-row class="judge-row">
+                    <ion-col offset-25 width-25>7-9</ion-col>
+                    <ion-col width-25>{{ strs.Judge.Exorbitant }}</ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

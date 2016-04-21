@@ -1,0 +1,53 @@
+<ion-navbar *navbar favorite>
+    <ion-title>{{ strs.Knowledge.MuscleMassIntro }}</ion-title>
+</ion-navbar>
+
+<ion-content padding class="knowledge page-muscle-mass-intro">
+    <ion-card class="intro-content">
+        <ion-card-header>
+            <div class="intro-title">
+                <a><img src="img/icon-temp.png"></a>
+                <span>{{ strs.Knowledge.MuscleMassIntro }}:</span>
+            </div>
+        </ion-card-header>
+        <ion-card-content [innerHTML]="strs.Knowledge.MuscleMassIntroCtn"></ion-card-content>
+    </ion-card>
+
+    <ion-card class="std-content">
+        <ion-card-header>{{ strs.Title.JudgeStandard }}:</ion-card-header>
+        
+        <ion-card-content>
+            <div class="group-title">{{ strs.Noun.Male }}:</div>
+            <ion-item>
+                <ion-row class="judge-row">
+                    <ion-col width-50>{{ strs.Noun.Height }} < 160cm</ion-col>
+                    <ion-col width-50>{{ strs.Noun.MuscleMass }} 38.5~46.5 kg</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-50>160cm ≦ {{ strs.Noun.Height }} ≦ 170cm</ion-col>
+                    <ion-col width-50>{{ strs.Noun.MuscleMass }} 44~52.4 kg</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-50>{{ strs.Noun.Height }} > 170cm</ion-col>
+                    <ion-col width-50>{{ strs.Noun.MuscleMass }} 49.4~59.4 kg</ion-col>
+                </ion-row>
+            </ion-item>
+
+            <div class="group-title">{{ strs.Noun.Female }}:</div>
+            <ion-item>
+                <ion-row class="judge-row">
+                    <ion-col width-50>{{ strs.Noun.Height }} < 150cm</ion-col>
+                    <ion-col width-50>{{ strs.Noun.MuscleMass }} 29.1~34.7 kg</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-50>150cm ≦ {{ strs.Noun.Height }} ≦ 160cm</ion-col>
+                    <ion-col width-50>{{ strs.Noun.MuscleMass }} 32.9~37.5 kg</ion-col>
+                </ion-row>
+                <ion-row class="judge-row">
+                    <ion-col width-50>{{ strs.Noun.Height }} > 160cm</ion-col>
+                    <ion-col width-50>{{ strs.Noun.MuscleMass }} 36.5~42.5 kg</ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

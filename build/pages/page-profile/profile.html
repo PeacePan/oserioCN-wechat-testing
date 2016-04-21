@@ -1,0 +1,48 @@
+<ion-navbar *navbar favorite>
+    <ion-title>{{ strs.Menu.PersonalProfile }}</ion-title>
+</ion-navbar>
+
+<ion-content padding id="profile-content" class="page-profile">
+    <ion-list class="user-avatar">
+        <ion-item class="has-border-radius">
+            <ion-avatar item-left>
+                <img src="{{ userProfile.headimgurl }}" />
+            </ion-avatar>
+            <h1>{{ userProfile.nickname }}</h1>
+        </ion-item>
+    </ion-list>
+
+    <ion-list class="basic-info">
+        <ion-list-header>{{ strs.Title.BasicInformationConfig }}:</ion-list-header>
+        <ion-item class="has-border-radius">
+            <ion-label fixed>{{ strs.Noun.Birthday }}</ion-label>
+            <ion-input type="date" [(ngModel)]="userProfile.birthday"></ion-input>
+        </ion-item>
+
+        <ion-item class="gender-col">
+            <ion-label fixed>{{ strs.Noun.Gender }}</ion-label>
+            <ion-select [(ngModel)]="userProfile.sex">
+                <ion-option value="1" checked="true">{{ strs.Noun.MaleShort }}</ion-option>
+                <ion-option value="0">{{ strs.Noun.FemaleShort }}</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <label>{{ strs.Noun.Weight }}</label>
+            <input type="number" [(ngModel)]="userProfile.weight" placeholder="ex: 44.3" />
+            <span>kg</span>
+        </ion-item>
+
+        <ion-item>
+            <label>{{ strs.Noun.Height }}</label>
+            <input type="number" [(ngModel)]="userProfile.height" placeholder="ex: 160.5" />
+            <span>cm</span>
+        </ion-item>
+
+        <ion-item class="has-border-radius">
+            <label>{{ strs.Noun.GoalWeight }}</label>
+            <input type="number" [(ngModel)]="userProfile.goal_weight" placeholder="ex: 40" />
+            <span>kg</span>
+        </ion-item>
+    </ion-list>
+</ion-content>

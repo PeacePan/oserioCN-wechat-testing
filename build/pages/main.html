@@ -5,7 +5,7 @@
     <ion-title>{{ pageTitle }}</ion-title>
 
     <ion-buttons end>
-        <button [navPush]="pageProfile">
+        <button (click)="openProfile()">
             <ion-icon name="person"></ion-icon>
         </button>
     </ion-buttons>
@@ -14,22 +14,15 @@
 <ion-tabs [selectedIndex]="tabsIndex" favorite>
     <ion-tab 
         [root]="tabHomeRoot" 
-        tabTitle="个人健康中心" 
+        tabTitle="{{ strs.Menu.PersonalHealthCenter }}" 
         tabIcon="pulse" 
         (select)="selectedTab($event)">
     </ion-tab>
 
     <ion-tab 
         [root]="tabDevicesRoot" 
-        tabTitle="设备更新中心" 
+        tabTitle="{{ strs.Menu.DeviceUpdateCenter }}" 
         tabIcon="chatbubbles" 
         (select)="selectedTab($event)">
     </ion-tab>
-
-    <!-- <ion-tab 
-        [root]="tabDocumentsRoot" 
-        tabTitle="线上引导文件" 
-        tabIcon="cog" 
-        (select)="selectedTab($event)">
-    </ion-tab> -->
 </ion-tabs>

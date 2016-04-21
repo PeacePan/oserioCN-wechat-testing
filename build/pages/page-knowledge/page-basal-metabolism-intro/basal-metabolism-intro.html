@@ -1,0 +1,63 @@
+<ion-navbar *navbar favorite>
+    <ion-title>{{ strs.Knowledge.BasalMetabolismIntro }}</ion-title>
+</ion-navbar>
+
+<ion-content padding class="knowledge page-basal-metabolism-intro">
+    <ion-card class="intro-content">
+        <ion-card-header>
+            <div class="intro-title">
+                <a><img src="img/icon-temp.png"></a>
+                <span>{{ strs.Knowledge.BasalMetabolismIntro }}:</span>
+            </div>
+        </ion-card-header>
+        <ion-card-content [innerHTML]="strs.Knowledge.BasalMetabolismIntroCtn"></ion-card-content>
+    </ion-card>
+
+    <ion-card class="std-content">
+        <ion-card-header>{{ strs.Title.JudgeMethodStandard }}:</ion-card-header>
+        
+        <ion-card-content>
+            <div class="group-title">{{ strs.Title.CalorieCal }}:</div>
+            <div class="formula-main text-top" [innerHTML]="strs.Content.CalorieCalFormulaMain1"></div>
+            <div class="formula-main text-bottom" [innerHTML]="strs.Content.CalorieCalFormulaMain2"></div>
+            <div class="formula-sub text-top" [innerHTML]="strs.Content.CalorieCalFormulaSub1"></div>
+            <div class="formula-sub text-bottom" [innerHTML]="strs.Content.CalorieCalFormulaSub2"></div>
+
+            <div class="group-title">{{ strs.Title.WorkClassifyDescription }}</div>
+            <ion-item>
+                <ion-row class="classify-row">
+                    <ion-col width-30><span>{{ strs.Noun.WorkLevel }}</span></ion-col>
+                    <ion-col width-30><span>{{ strs.Noun.WorkContent }}</span></ion-col>
+                    <ion-col width-40 class="none-padding">
+                        <div class="top-col">{{ strs.Content.CalorieRequest }}</div>
+                        <div class="bottom-col">
+                            <span>{{ strs.Noun.Female }}</span>
+                            <span>{{ strs.Noun.Male }}</span>
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row class="classify-row">
+                    <ion-col width-30><span>{{ strs.Noun.LightWork }}</span></ion-col>
+                    <ion-col width-30><span [innerHTML]="strs.Content.LightWorkDescription"></span></ion-col>
+                    <ion-col width-20><span>30 {{ strs.Noun.Kilocalorie }}</span></ion-col>
+                    <ion-col width-20><span>40 {{ strs.Noun.Kilocalorie }}</span></ion-col>
+                </ion-row>
+
+                <ion-row class="classify-row">
+                    <ion-col width-30><span>{{ strs.Noun.ModerateWork }}</span></ion-col>
+                    <ion-col width-30><span [innerHTML]="strs.Content.ModerateWorkDescription"></span></ion-col>
+                    <ion-col width-20><span>35 {{ strs.Noun.Kilocalorie }}</span></ion-col>
+                    <ion-col width-20><span>45 {{ strs.Noun.Kilocalorie }}</span></ion-col>
+                </ion-row>
+
+                <ion-row class="classify-row">
+                    <ion-col width-30><span>{{ strs.Noun.HeavyWork }}</span></ion-col>
+                    <ion-col width-30><span [innerHTML]="strs.Content.HeavyWorkDescription"></span></ion-col>
+                    <ion-col width-20><span>40 {{ strs.Noun.Kilocalorie }}</span></ion-col>
+                    <ion-col width-20><span>50 {{ strs.Noun.Kilocalorie }}</span></ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
