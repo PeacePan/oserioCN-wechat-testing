@@ -452,7 +452,7 @@ var PageMetabolicAgeIntro = (function () {
         this.app.setTitle(this.strs.Menu.MyOserio);
     };
     PageMetabolicAgeIntro.prototype.onPageWillLeave = function () {
-        this.routing.run.prevent(this.routing.table.bodyFatIntro);
+        this.routing.run.prevent(this.routing.table.metabolicAgeIntro);
     };
     PageMetabolicAgeIntro = __decorate([
         ionic_angular_1.Page({ templateUrl: 'build/pages/page-knowledge/page-metabolic-age-intro/metabolic-age-intro.html' }), 
@@ -520,7 +520,7 @@ var PageVisceralFatIntro = (function () {
         this.app.setTitle(this.strs.Menu.MyOserio);
     };
     PageVisceralFatIntro.prototype.onPageWillLeave = function () {
-        this.routing.run.prevent(this.routing.table.bodyFatIntro);
+        this.routing.run.prevent(this.routing.table.visceralFatIntro);
     };
     PageVisceralFatIntro = __decorate([
         ionic_angular_1.Page({ templateUrl: 'build/pages/page-knowledge/page-visceral-fat-intro/visceral-fat-intro.html' }), 
