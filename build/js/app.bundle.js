@@ -542,7 +542,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var ionic_angular_1 = require('ionic-angular');
-var service_wechat_1 = require('../../services/service-wechat');
 var service_user_1 = require('../../services/service-user');
 var app_i18n_1 = require('../../services/app-i18n');
 var custom_routing_1 = require('../../services/custom-routing');
@@ -564,6 +563,8 @@ var PageProfile = (function () {
     };
     PageProfile.prototype.onPageWillEnter = function () {
         this.userProfile = Object.assign({}, service_user_1.User.profile);
+        this.userProfile.nickname = '訪客';
+        this.userProfile.headimgurl = 'img/avatar-default-male.png';
         this.userProfile.birthday = this.userProfile.birthday ? this.userProfile.birthday : '1970-01-01';
         this.userProfile.weight = this.userProfile.weight ? this.userProfile.weight : '';
         this.userProfile.height = this.userProfile.height ? this.userProfile.height : '';
@@ -577,20 +578,18 @@ var PageProfile = (function () {
         custom_routing_1.CustomRouting.run.prevent(custom_routing_1.CustomRouting.table.profile);
     };
     PageProfile.prototype.onPageDidLeave = function () {
-        var _this = this;
         console.log(this.userProfile);
         console.log(service_user_1.User.profile);
-        if (JSON.stringify(this.userProfile) !== JSON.stringify(service_user_1.User.profile)) {
-            // 使用者資料有變更，送出更新要求給後端伺服器
-            console.log('userProfile has change');
-            service_wechat_1.Wechat.sdk.updateUserInfo(this.userProfile).then(function () {
-                // 確定後端伺服器更新後再更新本地端
-                service_user_1.User.profile = _this.userProfile;
-            });
-        }
-        else {
-            console.log('userProfile has not change');
-        }
+        // if (JSON.stringify(this.userProfile) !== JSON.stringify(User.profile)) {
+        //     // 使用者資料有變更，送出更新要求給後端伺服器
+        //     console.log('userProfile has change');
+        //     Wechat.sdk.updateUserInfo(this.userProfile).then(() => {
+        //         // 確定後端伺服器更新後再更新本地端
+        //         User.profile = this.userProfile;
+        //     });
+        // } else {
+        //     console.log('userProfile has not change');
+        // }
     };
     PageProfile = __decorate([
         ionic_angular_1.Page({ templateUrl: 'build/pages/page-profile/profile.html' }), 
@@ -600,7 +599,7 @@ var PageProfile = (function () {
 }());
 exports.PageProfile = PageProfile;
 
-},{"../../services/app-i18n":19,"../../services/custom-routing":20,"../../services/service-user":21,"../../services/service-wechat":22,"ionic-angular":357}],14:[function(require,module,exports){
+},{"../../services/app-i18n":19,"../../services/custom-routing":20,"../../services/service-user":21,"ionic-angular":357}],14:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -836,7 +835,7 @@ var TabHome = (function () {
         this.userProfile = service_user_1.User.profile ? service_user_1.User.profile : {};
         if (this.userProfile) {
             if (!this.userProfile.nickname) {
-                this.userProfile.nickname = '讀取中...';
+                this.userProfile.nickname = '訪客';
             }
             if (!this.userProfile.headimgurl) {
                 this.userProfile.headimgurl = 'img/avatar-default-male.png';
