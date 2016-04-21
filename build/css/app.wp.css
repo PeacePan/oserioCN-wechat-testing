@@ -9192,6 +9192,8 @@ ion-col[offset-70] {
   position: relative;
   top: 4rem;
   left: -1.5rem; }
+  .page-metabolic-age-intro ion-card.std-content ion-item .intro-pic .pic-text div:last-child {
+    margin-top: 4rem; }
 
 .page-metabolic-age-intro ion-card.std-content ion-item .age-text ion-col {
   text-align: center;
