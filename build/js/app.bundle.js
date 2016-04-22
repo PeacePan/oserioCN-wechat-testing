@@ -550,6 +550,7 @@ var PageProfile = (function () {
         this.app = app;
         this.strs = app_i18n_1.i18nString.cmd.strs;
         this.userProfile = {};
+        this.focusTimer = null;
         this.blurTimer = null;
     }
     PageProfile.prototype.ngAfterViewInit = function () {
@@ -563,10 +564,14 @@ var PageProfile = (function () {
         var _this = this;
         this.blurTimer = setTimeout(function () {
             _this.content.scrollToTop();
-        }, 600);
+        }, 300);
     };
     PageProfile.prototype.focusInput = function (e) {
         var _this = this;
+        if (this.focusTimer) {
+            clearTimeout(this.focusTimer);
+            this.focusTimer = null;
+        }
         if (this.blurTimer) {
             clearTimeout(this.blurTimer);
             this.blurTimer = null;
@@ -575,7 +580,9 @@ var PageProfile = (function () {
         if (!inputElem.onblur) {
             inputElem.onblur = function () { _this.scrollToTop(inputElem); };
         }
-        inputElem.focus();
+        this.focusTimer = setTimeout(function () {
+            inputElem.focus();
+        }, 300);
     };
     PageProfile.prototype.onPageWillEnter = function () {
         this.userProfile = Object.assign({}, service_user_1.User.profile);
