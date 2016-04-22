@@ -550,6 +550,7 @@ var PageProfile = (function () {
         this.app = app;
         this.strs = app_i18n_1.i18nString.cmd.strs;
         this.userProfile = {};
+        this.blurTimer = null;
     }
     PageProfile.prototype.ngAfterViewInit = function () {
         this.content = this.app.getComponent('profile-content');
@@ -559,7 +560,22 @@ var PageProfile = (function () {
         // }
     };
     PageProfile.prototype.scrollToTop = function (elem) {
-        this.content.scrollToTop();
+        var _this = this;
+        this.blurTimer = setTimeout(function () {
+            _this.content.scrollToTop();
+        }, 600);
+    };
+    PageProfile.prototype.focusInput = function (e) {
+        var _this = this;
+        if (this.blurTimer) {
+            clearTimeout(this.blurTimer);
+            this.blurTimer = null;
+        }
+        var inputElem = e.srcElement.offsetParent.querySelector('ion-input input');
+        if (!inputElem.onblur) {
+            inputElem.onblur = function () { _this.scrollToTop(inputElem); };
+        }
+        inputElem.focus();
     };
     PageProfile.prototype.onPageWillEnter = function () {
         this.userProfile = Object.assign({}, service_user_1.User.profile);

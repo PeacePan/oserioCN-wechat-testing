@@ -12,7 +12,7 @@
         </ion-item>
     </ion-list>
 
-    <ion-list class="basic-info">
+    <ion-list class="basic-info" (click)="focusInput($event)">
         <ion-list-header>{{ strs.Title.BasicInformationConfig }}:</ion-list-header>
         <ion-item class="has-border-radius">
             <ion-label>{{ strs.Noun.Birthday }}</ion-label>
@@ -27,19 +27,19 @@
             </ion-select>
         </ion-item>
 
-        <ion-item>
+        <ion-item (click)="focusInput($event)">
             <ion-label>{{ strs.Noun.Weight }}</ion-label>
             <ion-input type="number" [(ngModel)]="userProfile.weight"></ion-input>
             <ion-input type="text" value="kg" readonly></ion-input>
         </ion-item>
 
-        <ion-item>
+        <ion-item (click)="focusInput($event)">
             <ion-label>{{ strs.Noun.Height }}</ion-label>
             <ion-input type="number" [(ngModel)]="userProfile.height"></ion-input>
             <ion-input type="text" value="cm" readonly></ion-input>
         </ion-item>
 
-        <ion-item class="has-border-radius">
+        <ion-item class="has-border-radius" (click)="focusInput($event)">
             <ion-label>{{ strs.Noun.GoalWeight }}</ion-label>
             <ion-input type="number" [(ngModel)]="userProfile.goal_weight"></ion-input>
             <ion-input type="text" value="kg" readonly></ion-input>
