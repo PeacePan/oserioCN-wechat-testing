@@ -8,9 +8,7 @@
 
         <ion-list>
             <button ion-item *ngFor="#p of pages" (tap)="routing.openPage(p)">
-                <ion-avatar item-left>
-                    <img src="{{ p.image }}">
-                </ion-avatar>
+                <ion-avatar item-left><img src="{{ p.image }}"></ion-avatar>
                 {{ p.title }}
             </button>
         </ion-list>

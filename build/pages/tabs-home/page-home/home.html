@@ -4,7 +4,7 @@
             <ion-avatar item-left>
                 <img src="{{ userProfile.headimgurl }}" alt="avatar">
             </ion-avatar>
-            <h1>{{ userProfile.nickname }}</h1>
+            <div class="user-name">{{ userProfile.nickname }}</div>
             <p><ion-icon name="male"></ion-icon>　28{{ strs.Noun.YearsOld }}　172cm</p>
         </ion-item>
     </ion-list>
@@ -14,7 +14,7 @@
         <ion-list-header>{{ strs.Title.BodyAnalysis }}:</ion-list-header>
 
         <ion-item class="text-center body-score has-border-radius">
-            <h1>施工中</h1>
+            <div><big>施工中</big></div>
         </ion-item>
     </ion-list>
 

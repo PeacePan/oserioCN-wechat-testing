@@ -7883,6 +7883,9 @@ ion-col[offset-70] {
   .hearder-button.right ion-icon {
     font-size: 2.4em; }
 
+.user-name {
+  font-size: 2.8rem; }
+
 .page-home ion-item.body-score {
   min-height: 7rem; }
 
