@@ -582,7 +582,7 @@ var PageProfile = (function () {
         }
         this.focusTimer = setTimeout(function () {
             inputElem.focus();
-        }, 401);
+        }, 600);
     };
     PageProfile.prototype.onPageWillEnter = function () {
         this.userProfile = Object.assign({}, service_user_1.User.profile);
