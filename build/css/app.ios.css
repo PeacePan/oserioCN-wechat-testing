@@ -7795,7 +7795,7 @@ ion-menu {
 ion-content {
   background-color: #daecf5; }
   ion-content ion-list {
-    margin: 0 0 1.6rem 0; }
+    margin: 0 0 2rem 0; }
   ion-content ion-list-header {
     font-size: 1.8rem;
     border: none;
@@ -7878,6 +7878,11 @@ ion-col[offset-70] {
 .none-border {
   border: none !important; }
 
+.hearder-button.right {
+  min-width: 2.4em; }
+  .hearder-button.right ion-icon {
+    font-size: 2.4em; }
+
 .page-home ion-item.body-score {
   min-height: 7rem; }
 
@@ -7935,15 +7940,15 @@ ion-col[offset-70] {
   padding-left: 0.5rem;
   border: none; }
 
-.page-profile .basic-info .gender-col ion-label {
+.page-profile .basic-info ion-label {
   color: black;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 35%;
-  -ms-flex: 0 0 35%;
-  flex: 0 0 35%;
-  width: 35%;
-  min-width: 35%;
-  max-width: 40%; }
+  -webkit-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  width: 30%;
+  min-width: 30%;
+  max-width: 30%; }
 
 .page-profile .basic-info ion-item {
   padding-left: 1rem; }
@@ -7952,21 +7957,6 @@ ion-col[offset-70] {
     border-bottom: none; }
   .page-profile .basic-info ion-item:not(:last-child) .item-inner .input-wrapper {
     border-bottom: 0.4rem solid gray; }
-  .page-profile .basic-info ion-item ion-label {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 1rem 0; }
-    .page-profile .basic-info ion-item ion-label label {
-      width: 40%; }
-    .page-profile .basic-info ion-item ion-label input {
-      border: none;
-      width: 20%;
-      font-size: 2rem; }
-    .page-profile .basic-info ion-item ion-label span {
-      font-size: 1.4rem;
-      margin: auto 0; }
 
 .knowledge scroll-content {
   padding: 0.25rem; }
@@ -8151,11 +8141,12 @@ ion-col[offset-70] {
   font-size: 1rem; }
 
 .page-metabolic-age-intro ion-card.std-content ion-item .intro-pic .pic-text {
-  position: relative;
-  top: 4rem;
-  left: -1.5rem; }
-  .page-metabolic-age-intro ion-card.std-content ion-item .intro-pic .pic-text div:last-child {
-    margin-top: 4rem; }
+  margin-top: 1rem;
+  margin-left: -1.5rem; }
+  .page-metabolic-age-intro ion-card.std-content ion-item .intro-pic .pic-text div {
+    font-size: 0.75rem; }
+    .page-metabolic-age-intro ion-card.std-content ion-item .intro-pic .pic-text div:last-child {
+      margin-top: 4rem; }
 
 .page-metabolic-age-intro ion-card.std-content ion-item .age-text ion-col {
   text-align: center;
@@ -8187,36 +8178,33 @@ ion-col[offset-70] {
     .page-weight-trendy ion-item ion-label ion-buttons button[clear] .icon-inner span {
       padding-top: 0.5rem; }
 
-/* LG Optimus L3 II E425f */
 /* iPod Touch 4th Gen */
 /* iPhone 4S */
+/* iPhone 5 */
+/* HTC Desire C */
+@media screen and (device-width: 320px) and (orientation: portrait), (width: 320px) and (orientation: portrait) {
+  html {
+    font-size: 50%; } }
+
+/* Samsung Galaxy S4 */
+/* iPhone 6 */
+/* iPhone 6 plus */
+/* iPads */
 /* Nokia Lumia 520 */
 /* Huawei U8860 */
-@media screen and (device-height: 568px) and (orientation: portrait) {
-  html {
-    font-size: 50%; } }
-
-/* iPhone 5 */
-@media screen and (height: 568px) and (orientation: portrait) {
-  html {
-    font-size: 50%; } }
-
 /* Nexus 5 */
 /* Sony Xperia Z1 */
 /* Sony Xperia S, lon */
 /* Samsung Galaxy Note */
 /* Nexus 5X */
-/* iPhone 6 */
-/* iPhone 6 Plus */
 /* Nexus 6P */
 /* Sony Xperia Sola, U */
 /* Nexus 7 2013 */
-@media screen and (device-height: 960px) and (orientation: portrait) {
+@media screen and (device-width: 960px) and (orientation: portrait) {
   html {
     font-size: 90%; } }
 
 /* Nexus 7 */
-/* iPads */
 /* Nexus 10 */
 /* Laptop with HiDPI screen */
 /* Toshiba AT330 */

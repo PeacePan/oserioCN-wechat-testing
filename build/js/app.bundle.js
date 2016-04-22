@@ -204,42 +204,42 @@ var PageKnowledge = (function () {
         this.strs = app_i18n_1.i18nString.cmd.strs;
         this.pages = [{
                 title: this.strs.Knowledge.MuscleMassIntro,
-                image: 'img/icon-temp.png',
+                image: 'img/icon-sample.svg',
                 component: muscle_mass_intro_1.PageMuscleMassIntro,
                 hash: this.routing.table.muscleMassIntro
             }, {
                 title: this.strs.Knowledge.BMIIntro,
-                image: 'img/icon-temp.png',
+                image: 'img/icon-sample.svg',
                 component: bmi_intro_1.PageBMIIntro,
                 hash: this.routing.table.bmiIntro
             }, {
                 title: this.strs.Knowledge.BoneMassIntro,
-                image: 'img/icon-temp.png',
+                image: 'img/icon-sample.svg',
                 component: bone_mass_intro_1.PageBoneMassIntro,
                 hash: this.routing.table.boneMassIntro
             }, {
                 title: this.strs.Knowledge.BodyWaterIntro,
-                image: 'img/icon-temp.png',
+                image: 'img/icon-sample.svg',
                 component: body_water_intro_1.PageBodyWaterIntro,
                 hash: this.routing.table.bodyWaterIntro
             }, {
                 title: this.strs.Knowledge.BasalMetabolismIntro,
-                image: 'img/icon-temp.png',
+                image: 'img/icon-sample.svg',
                 component: basal_metabolism_intro_1.PageBasalMetabolismIntro,
                 hash: this.routing.table.basalMetabolismIntro
             }, {
                 title: this.strs.Knowledge.BodyFatIntro,
-                image: 'img/icon-temp.png',
+                image: 'img/icon-sample.svg',
                 component: body_fat_intro_1.PageBodyFatIntro,
                 hash: this.routing.table.bodyFatIntro
             }, {
                 title: this.strs.Knowledge.VisceralFatIntro,
-                image: 'img/icon-temp.png',
+                image: 'img/icon-sample.svg',
                 component: visceral_fat_intro_1.PageVisceralFatIntro,
                 hash: this.routing.table.visceralFatIntro
             }, {
                 title: this.strs.Knowledge.MetabolicAgeIntro,
-                image: 'img/icon-temp.png',
+                image: 'img/icon-sample.svg',
                 component: metabolic_age_intro_1.PageMetabolicAgeIntro,
                 hash: this.routing.table.metabolicAgeIntro
             }];

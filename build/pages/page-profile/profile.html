@@ -15,12 +15,12 @@
     <ion-list class="basic-info">
         <ion-list-header>{{ strs.Title.BasicInformationConfig }}:</ion-list-header>
         <ion-item class="has-border-radius">
-            <ion-label fixed>{{ strs.Noun.Birthday }}</ion-label>
+            <ion-label>{{ strs.Noun.Birthday }}</ion-label>
             <ion-input type="date" [(ngModel)]="userProfile.birthday"></ion-input>
         </ion-item>
 
         <ion-item class="gender-col">
-            <ion-label fixed>{{ strs.Noun.Gender }}</ion-label>
+            <ion-label>{{ strs.Noun.Gender }}</ion-label>
             <ion-select [(ngModel)]="userProfile.sex">
                 <ion-option value="1" checked="true">{{ strs.Noun.MaleShort }}</ion-option>
                 <ion-option value="0">{{ strs.Noun.FemaleShort }}</ion-option>
@@ -28,21 +28,21 @@
         </ion-item>
 
         <ion-item>
-            <label>{{ strs.Noun.Weight }}</label>
-            <input type="number" [(ngModel)]="userProfile.weight" placeholder="ex: 44.3" />
-            <span>kg</span>
+            <ion-label>{{ strs.Noun.Weight }}</ion-label>
+            <ion-input type="number" [(ngModel)]="userProfile.weight"></ion-input>
+            <ion-input type="text" value="kg" readonly></ion-input>
         </ion-item>
 
         <ion-item>
-            <label>{{ strs.Noun.Height }}</label>
-            <input type="number" [(ngModel)]="userProfile.height" placeholder="ex: 160.5" />
-            <span>cm</span>
+            <ion-label>{{ strs.Noun.Height }}</ion-label>
+            <ion-input type="number" [(ngModel)]="userProfile.height"></ion-input>
+            <ion-input type="text" value="cm" readonly></ion-input>
         </ion-item>
 
         <ion-item class="has-border-radius">
-            <label>{{ strs.Noun.GoalWeight }}</label>
-            <input type="number" [(ngModel)]="userProfile.goal_weight" placeholder="ex: 40" />
-            <span>kg</span>
+            <ion-label>{{ strs.Noun.GoalWeight }}</ion-label>
+            <ion-input type="number" [(ngModel)]="userProfile.goal_weight"></ion-input>
+            <ion-input type="text" value="kg" readonly></ion-input>
         </ion-item>
     </ion-list>
 </ion-content>
