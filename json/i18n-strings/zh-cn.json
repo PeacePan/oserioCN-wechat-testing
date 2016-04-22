@@ -5,6 +5,8 @@
         "WeixinMarket": "微信小店",
         "OnlineDocument": "线上引导文件",
         "KnowledgeStation": "知识小站",
+        "OserioSocial": "活动社群",
+        "WeixinMarket": "微信小店",
 
         "PersonalHealthCenter": "个人健康中心",
         "DeviceUpdateCenter": "设备更新中心",
@@ -56,7 +58,12 @@
         "MeasurementName": "测量名称",
         "MeasurementResult": "测量结果",
         "AnalyzingHealth": "健康判断",
-        "DataRecordLookup": "数据纪录查询"
+        "DataRecordLookup": "数据纪录查询",
+
+        "View": "查看",
+        "Unbind": "解除绑定",
+        "Connected": "已连接",
+        "Disconnected": "未连接"
     },
 
     "Knowledge": {
