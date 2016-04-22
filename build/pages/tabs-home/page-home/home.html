@@ -29,8 +29,8 @@
             </ion-row>
 
             <ion-row class="watch-row">
-                <ion-col offset-70>
-                    <ion-icon name="play" (click)="openWeightTrendy()"></ion-icon>
+                <ion-col offset-70 (tap)="openWeightTrendy()">
+                    <ion-icon name="play"></ion-icon>
                 </ion-col>
             </ion-row>
 
@@ -63,8 +63,8 @@
             </ion-row>
 
             <ion-row class="watch-row">
-                <ion-col offset-70>
-                    <ion-icon name="play" (click)="openBodyFatTrendy()"></ion-icon>
+                <ion-col offset-70 (tap)="openBodyFatTrendy()">
+                    <ion-icon name="play"></ion-icon>
                 </ion-col>
             </ion-row>
             
@@ -95,18 +95,14 @@
                 <ion-col width-20 [innerHTML]="dbt.metabolicAge.judgeText"></ion-col>
                 <ion-col width-30 class="none-top-bottom-border">&nbsp;</ion-col>
             </ion-row>
-
-            <ion-row class="watch-row bottom">
-                <ion-col offset-70>
-                    <ion-icon name="play" (click)="openBasalMetabolismTrendy()"></ion-icon>
-                </ion-col>
-            </ion-row>
             
             <ion-row>
                 <ion-col width-25 [innerHTML]="dbt.basalMetabolism.name"></ion-col>
                 <ion-col width-25 [innerHTML]="dbt.basalMetabolism.value + dbt.basalMetabolism.unit"></ion-col>
                 <ion-col width-20 [innerHTML]="dbt.basalMetabolism.judgeText"></ion-col>
-                <ion-col width-30>&nbsp;</ion-col>
+                <ion-col width-30 class="watch-col" (tap)="openBasalMetabolismTrendy()">
+                    <ion-icon name="play"></ion-icon>
+                </ion-col>
             </ion-row>
             
 

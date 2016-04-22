@@ -13,6 +13,7 @@
 
     "Noun": {
         "Name": "姓名",
+        "Guest": "访客",
         "Menu": "菜单",
         "Back": "返回",
         "Date": "日期",
@@ -114,9 +115,9 @@
 
     "Content": {
         "CalorieCalFormulaMain1": "每日热量需要量=",
-        "CalorieCalFormulaMain2": "现有体重 (公斤) <b>X<b> 热量需要量 (大卡/公斤)",
+        "CalorieCalFormulaMain2": "现有体重 (公斤) <b>X</b> 热量需要量 (大卡/公斤)",
         "CalorieCalFormulaSub1": "减重期每日热量需要量=",
-        "CalorieCalFormulaSub2": "现有体重 (公斤) <b>X<b> 热量需要量 (大卡/公斤) - 500大卡",
+        "CalorieCalFormulaSub2": "现有体重 (公斤) <b>X</b> 热量需要量 (大卡/公斤) - 500大卡",
         
         "CalorieRequest": "热量需要量 (大卡/公斤)",
         "LightWorkDescription": "家务或<br/>办公桌工作者",

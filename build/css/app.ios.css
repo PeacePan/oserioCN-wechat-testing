@@ -7928,8 +7928,9 @@ ion-col[offset-70] {
     .page-home .alldata-table .watch-row ion-col ion-icon {
       margin-top: 2.8rem;
       font-size: 1.6rem; }
-  .page-home .alldata-table .watch-row.bottom ion-icon {
-    margin-top: 0; }
+
+.page-home .alldata-table .watch-col ion-icon {
+  font-size: 1.6rem; }
 
 .page-profile .user-avatar ion-label {
   margin-left: 2.5rem; }
@@ -7952,9 +7953,11 @@ ion-col[offset-70] {
 
 .page-profile .basic-info ion-item {
   padding-left: 1rem; }
-  .page-profile .basic-info ion-item .item-inner {
-    padding-right: 1rem;
-    border-bottom: none; }
+  .page-profile .basic-info ion-item .unit-label {
+    position: absolute;
+    right: 0;
+    bottom: 0.5rem;
+    font-size: 1.4rem; }
   .page-profile .basic-info ion-item:not(:last-child) .item-inner .input-wrapper {
     border-bottom: 0.4rem solid gray; }
 
@@ -8144,9 +8147,9 @@ ion-col[offset-70] {
   margin-top: 1rem;
   margin-left: -1.5rem; }
   .page-metabolic-age-intro ion-card.std-content ion-item .intro-pic .pic-text div {
-    font-size: 0.75rem; }
+    font-size: 1rem; }
     .page-metabolic-age-intro ion-card.std-content ion-item .intro-pic .pic-text div:last-child {
-      margin-top: 4rem; }
+      margin-top: 5rem; }
 
 .page-metabolic-age-intro ion-card.std-content ion-item .age-text ion-col {
   text-align: center;

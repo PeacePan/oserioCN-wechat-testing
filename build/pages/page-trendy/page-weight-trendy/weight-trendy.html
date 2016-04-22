@@ -17,7 +17,7 @@
 
         <ion-item class="text-center knowledge-buttons has-border-radius">
             <ion-buttons>
-                <button clear *ngFor="#p of pages" (click)="routing.openPage(p)">
+                <button clear *ngFor="#p of pages" (tap)="routing.openPage(p)">
                     <div class="icon-inner">
                         <img src="img/icon-sample.svg" />
                         <span>{{ p.title }}</span>

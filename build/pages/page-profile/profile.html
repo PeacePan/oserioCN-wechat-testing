@@ -12,7 +12,7 @@
         </ion-item>
     </ion-list>
 
-    <ion-list class="basic-info" (click)="focusInput($event)">
+    <ion-list class="basic-info">
         <ion-list-header>{{ strs.Title.BasicInformationConfig }}:</ion-list-header>
         <ion-item class="has-border-radius">
             <ion-label>{{ strs.Noun.Birthday }}</ion-label>
@@ -27,22 +27,37 @@
             </ion-select>
         </ion-item>
 
-        <ion-item (click)="focusInput($event)">
+        <ion-item>
             <ion-label>{{ strs.Noun.Weight }}</ion-label>
-            <ion-input type="number" [(ngModel)]="userProfile.weight"></ion-input>
-            <ion-input type="text" value="kg" readonly></ion-input>
+            <ion-input type="number" 
+                [(ngModel)]="userProfile.weight" 
+                (keydown)="preventLength($event, userProfile.weight, 5)"
+                (focus)="clearScrollToTop()"
+                (blur)="readyScrollToTop()">
+            </ion-input>
+            <ion-label class="unit-label">kg</ion-label>
         </ion-item>
 
-        <ion-item (click)="focusInput($event)">
+        <ion-item>
             <ion-label>{{ strs.Noun.Height }}</ion-label>
-            <ion-input type="number" [(ngModel)]="userProfile.height"></ion-input>
-            <ion-input type="text" value="cm" readonly></ion-input>
+            <ion-input type="number" 
+                [(ngModel)]="userProfile.height"
+                (keydown)="preventLength($event, userProfile.height, 5)"
+                (focus)="clearScrollToTop()"
+                (blur)="readyScrollToTop()">
+            </ion-input>
+            <ion-label class="unit-label">cm</ion-label>
         </ion-item>
 
-        <ion-item class="has-border-radius" (click)="focusInput($event)">
+        <ion-item class="has-border-radius">
             <ion-label>{{ strs.Noun.GoalWeight }}</ion-label>
-            <ion-input type="number" [(ngModel)]="userProfile.goal_weight"></ion-input>
-            <ion-input type="text" value="kg" readonly></ion-input>
+            <ion-input type="number" 
+                [(ngModel)]="userProfile.goal_weight" 
+                (keydown)="preventLength($event, userProfile.goal_weight, 5)"
+                (focus)="clearScrollToTop()"
+                (blur)="readyScrollToTop()">
+            </ion-input>
+            <ion-label class="unit-label">kg</ion-label>
         </ion-item>
     </ion-list>
 </ion-content>

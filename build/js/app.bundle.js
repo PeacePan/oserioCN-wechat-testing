@@ -157,10 +157,8 @@ var custom_routing_1 = require('../..//services/custom-routing');
 var PageDocuments = (function () {
     function PageDocuments() {
         this.routing = custom_routing_1.CustomRouting;
-        console.log('constructor');
     }
     PageDocuments.prototype.onPageLoaded = function () {
-        console.log('onPageLoaded');
     };
     PageDocuments.prototype.onPageWillLeave = function () {
         this.routing.run.prevent(this.routing.table.documents);
@@ -548,46 +546,35 @@ var custom_routing_1 = require('../../services/custom-routing');
 var PageProfile = (function () {
     function PageProfile(app) {
         this.app = app;
+        this.routing = custom_routing_1.CustomRouting;
         this.strs = app_i18n_1.i18nString.cmd.strs;
         this.userProfile = {};
-        this.focusTimer = null;
         this.blurTimer = null;
     }
     PageProfile.prototype.ngAfterViewInit = function () {
         this.content = this.app.getComponent('profile-content');
-        // let profileInputs = this.content.scrollElement.querySelectorAll('ion-item input');
-        // for (let i = 0; i < profileInputs.length; i++) {
-        //     profileInputs[i].onblur = (e) => { this.scrollToTop(e.srcElement); }
-        // }
     };
-    PageProfile.prototype.scrollToTop = function (elem) {
+    PageProfile.prototype.preventLength = function (e, str, maxLen) {
+        if (e.keyCode !== 8 && (str + String.fromCharCode(e.keyCode)).length > maxLen) {
+            e.preventDefault();
+        }
+    };
+    PageProfile.prototype.readyScrollToTop = function (elem) {
         var _this = this;
         this.blurTimer = setTimeout(function () {
             _this.content.scrollToTop();
-        }, 300);
+        }, 500); // 等待時間，防止上一個focus重複觸發
     };
-    PageProfile.prototype.focusInput = function (e) {
-        var _this = this;
-        if (this.focusTimer) {
-            clearTimeout(this.focusTimer);
-            this.focusTimer = null;
-        }
+    PageProfile.prototype.clearScrollToTop = function () {
         if (this.blurTimer) {
             clearTimeout(this.blurTimer);
             this.blurTimer = null;
         }
-        var inputElem = e.srcElement.offsetParent.querySelector('ion-input input');
-        if (!inputElem.onblur) {
-            inputElem.onblur = function () { _this.scrollToTop(inputElem); };
-        }
-        this.focusTimer = setTimeout(function () {
-            inputElem.focus();
-        }, 600);
     };
     PageProfile.prototype.onPageWillEnter = function () {
         this.userProfile = Object.assign({}, service_user_1.User.profile);
-        this.userProfile.nickname = '訪客';
-        this.userProfile.headimgurl = 'img/avatar-default-male.png';
+        this.userProfile.nickname = this.userProfile.nickname ? this.userProfile.nickname : this.strs.Noun.Guest;
+        this.userProfile.headimgurl = this.userProfile.headimgurl ? this.userProfile.headimgurl : 'img/avatar-default-male.png';
         this.userProfile.birthday = this.userProfile.birthday ? this.userProfile.birthday : '1970-01-01';
         this.userProfile.weight = this.userProfile.weight ? this.userProfile.weight : '';
         this.userProfile.height = this.userProfile.height ? this.userProfile.height : '';
@@ -598,21 +585,16 @@ var PageProfile = (function () {
         this.app.setTitle(this.strs.Menu.MyOserio); // 固定AppTitle名稱
     };
     PageProfile.prototype.onPageWillLeave = function () {
-        custom_routing_1.CustomRouting.run.prevent(custom_routing_1.CustomRouting.table.profile);
+        this.routing.run.prevent(this.routing.table.profile);
     };
     PageProfile.prototype.onPageDidLeave = function () {
-        console.log(this.userProfile);
-        console.log(service_user_1.User.profile);
-        // if (JSON.stringify(this.userProfile) !== JSON.stringify(User.profile)) {
-        //     // 使用者資料有變更，送出更新要求給後端伺服器
-        //     console.log('userProfile has change');
-        //     Wechat.sdk.updateUserInfo(this.userProfile).then(() => {
-        //         // 確定後端伺服器更新後再更新本地端
-        //         User.profile = this.userProfile;
-        //     });
-        // } else {
-        //     console.log('userProfile has not change');
-        // }
+        if (JSON.stringify(this.userProfile) !== JSON.stringify(service_user_1.User.profile)) {
+            // 使用者資料有變更，送出更新要求給後端伺服器
+            // console.log('userProfile has change');
+            // Wechat.sdk.updateUserInfo(this.userProfile).then(() => {
+            // 確定後端伺服器更新後再更新本地端
+            service_user_1.User.profile = this.userProfile;
+        }
     };
     PageProfile = __decorate([
         ionic_angular_1.Page({ templateUrl: 'build/pages/page-profile/profile.html' }), 
@@ -795,20 +777,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var ionic_angular_1 = require('ionic-angular');
 var TabDevices = (function () {
-    function TabDevices(viewCtrl) {
-        this.viewCtrl = viewCtrl;
+    function TabDevices() {
         this.devices = [
             { pictureUrl: 'img/BLG-261A.jpg', name: 'BLG-261A', stateText: '已連線' },
             { pictureUrl: 'img/BLG-261B.jpg', name: 'BLG-261B', stateText: '未連線' },
             { pictureUrl: 'img/BLG-261C.jpg', name: 'BLG-261C', stateText: '已連線' },
             { pictureUrl: 'img/FHG-303R.jpg', name: 'FHG-303R', stateText: '未連線' }
         ];
-        this.viewCtrl.subscribe(function (next) {
-            console.log(next);
-        });
     }
     TabDevices.prototype.onPageDidEnter = function () {
-        console.log(this.viewCtrl);
     };
     TabDevices.prototype.showGestureSliding = function (i, slidingItem) {
         if (i !== 0) {
@@ -825,7 +802,7 @@ var TabDevices = (function () {
     };
     TabDevices = __decorate([
         ionic_angular_1.Page({ templateUrl: 'build/pages/tabs-home/page-devices/devices.html' }), 
-        __metadata('design:paramtypes', [ionic_angular_1.ViewController])
+        __metadata('design:paramtypes', [])
     ], TabDevices);
     return TabDevices;
 }());
@@ -1028,7 +1005,6 @@ var CustomRoutingInterface = (function () {
                 component: component,
                 isOpen: false
             };
-            console.log('routing register "' + hash + '"');
         }
     };
     CustomRoutingInterface.prototype.set = function (hash) {

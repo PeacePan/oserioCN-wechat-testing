@@ -17,7 +17,7 @@
 
         <ion-item class="text-center knowledge-buttons has-border-radius">
             <ion-buttons>
-                <button clear *ngFor="#p of pages" (click)="routing.openPage(p)">{{ p.title }}</button>
+                <button clear *ngFor="#p of pages" (tap)="routing.openPage(p)">{{ p.title }}</button>
           </ion-buttons>
         </ion-item>
     </ion-list>
