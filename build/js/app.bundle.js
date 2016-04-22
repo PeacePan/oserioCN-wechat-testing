@@ -159,20 +159,20 @@ var ionic_angular_1 = require('ionic-angular');
 var app_i18n_1 = require('../../services/app-i18n');
 var custom_routing_1 = require('../..//services/custom-routing');
 var PageDocuments = (function () {
-    function PageDocuments() {
+    function PageDocuments(app) {
+        this.app = app;
         this.routing = custom_routing_1.CustomRouting;
         this.strs = app_i18n_1.i18nString.cmd.strs;
     }
-    PageDocuments.prototype.onPageLoaded = function () {
+    PageDocuments.prototype.onPageDidEnter = function () {
+        this.app.setTitle(this.strs.Menu.MyOserio); // 固定AppTitle名稱
     };
     PageDocuments.prototype.onPageWillLeave = function () {
         this.routing.run.prevent(this.routing.table.documents);
     };
     PageDocuments = __decorate([
-        ionic_angular_1.Page({
-            templateUrl: 'build/pages/page-documents/documents.html',
-        }), 
-        __metadata('design:paramtypes', [])
+        ionic_angular_1.Page({ templateUrl: 'build/pages/page-documents/documents.html' }), 
+        __metadata('design:paramtypes', [ionic_angular_1.IonicApp])
     ], PageDocuments);
     return PageDocuments;
 }());
@@ -548,16 +548,20 @@ var ionic_angular_1 = require('ionic-angular');
 var app_i18n_1 = require('../../services/app-i18n');
 var custom_routing_1 = require('../../services/custom-routing');
 var PageMarket = (function () {
-    function PageMarket() {
+    function PageMarket(app) {
+        this.app = app;
         this.routing = custom_routing_1.CustomRouting;
         this.strs = app_i18n_1.i18nString.cmd.strs;
     }
+    PageMarket.prototype.onPageDidEnter = function () {
+        this.app.setTitle(this.strs.Menu.MyOserio); // 固定AppTitle名稱
+    };
     PageMarket.prototype.onPageWillLeave = function () {
         this.routing.run.prevent(this.routing.table.market);
     };
     PageMarket = __decorate([
         ionic_angular_1.Page({ templateUrl: 'build/pages/page-market/market.html' }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [ionic_angular_1.IonicApp])
     ], PageMarket);
     return PageMarket;
 }());
@@ -654,16 +658,20 @@ var ionic_angular_1 = require('ionic-angular');
 var app_i18n_1 = require('../../services/app-i18n');
 var custom_routing_1 = require('../../services/custom-routing');
 var PageSocial = (function () {
-    function PageSocial() {
+    function PageSocial(app) {
+        this.app = app;
         this.routing = custom_routing_1.CustomRouting;
         this.strs = app_i18n_1.i18nString.cmd.strs;
     }
+    PageSocial.prototype.onPageDidEnter = function () {
+        this.app.setTitle(this.strs.Menu.MyOserio); // 固定AppTitle名稱
+    };
     PageSocial.prototype.onPageWillLeave = function () {
         this.routing.run.prevent(this.routing.table.social);
     };
     PageSocial = __decorate([
         ionic_angular_1.Page({ templateUrl: 'build/pages/page-social/social.html' }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [ionic_angular_1.IonicApp])
     ], PageSocial);
     return PageSocial;
 }());
