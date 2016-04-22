@@ -29,7 +29,6 @@ var WechatWebApp = (function () {
         this.rootPage = main_1.TabsMain;
         this.routing = custom_routing_1.CustomRouting;
         this.routing.run.setup(app);
-        this.app = app;
         app_i18n_1.i18nString.cmd.initialize(http).then(function (strs) {
             _this.strs = strs;
             _this.menuTilte = strs.Noun.Menu;
@@ -157,10 +156,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var ionic_angular_1 = require('ionic-angular');
+var app_i18n_1 = require('../../services/app-i18n');
 var custom_routing_1 = require('../..//services/custom-routing');
 var PageDocuments = (function () {
     function PageDocuments() {
         this.routing = custom_routing_1.CustomRouting;
+        this.strs = app_i18n_1.i18nString.cmd.strs;
     }
     PageDocuments.prototype.onPageLoaded = function () {
     };
@@ -177,7 +178,7 @@ var PageDocuments = (function () {
 }());
 exports.PageDocuments = PageDocuments;
 
-},{"../..//services/custom-routing":22,"ionic-angular":359}],4:[function(require,module,exports){
+},{"../..//services/custom-routing":22,"../../services/app-i18n":21,"ionic-angular":359}],4:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -545,10 +546,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var ionic_angular_1 = require('ionic-angular');
 var app_i18n_1 = require('../../services/app-i18n');
+var custom_routing_1 = require('../../services/custom-routing');
 var PageMarket = (function () {
     function PageMarket() {
+        this.routing = custom_routing_1.CustomRouting;
         this.strs = app_i18n_1.i18nString.cmd.strs;
     }
+    PageMarket.prototype.onPageWillLeave = function () {
+        this.routing.run.prevent(this.routing.table.market);
+    };
     PageMarket = __decorate([
         ionic_angular_1.Page({ templateUrl: 'build/pages/page-market/market.html' }), 
         __metadata('design:paramtypes', [])
@@ -557,7 +563,7 @@ var PageMarket = (function () {
 }());
 exports.PageMarket = PageMarket;
 
-},{"../../services/app-i18n":21,"ionic-angular":359}],14:[function(require,module,exports){
+},{"../../services/app-i18n":21,"../../services/custom-routing":22,"ionic-angular":359}],14:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -646,10 +652,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var ionic_angular_1 = require('ionic-angular');
 var app_i18n_1 = require('../../services/app-i18n');
+var custom_routing_1 = require('../../services/custom-routing');
 var PageSocial = (function () {
     function PageSocial() {
+        this.routing = custom_routing_1.CustomRouting;
         this.strs = app_i18n_1.i18nString.cmd.strs;
     }
+    PageSocial.prototype.onPageWillLeave = function () {
+        this.routing.run.prevent(this.routing.table.social);
+    };
     PageSocial = __decorate([
         ionic_angular_1.Page({ templateUrl: 'build/pages/page-social/social.html' }), 
         __metadata('design:paramtypes', [])
@@ -658,7 +669,7 @@ var PageSocial = (function () {
 }());
 exports.PageSocial = PageSocial;
 
-},{"../../services/app-i18n":21,"ionic-angular":359}],16:[function(require,module,exports){
+},{"../../services/app-i18n":21,"../../services/custom-routing":22,"ionic-angular":359}],16:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
