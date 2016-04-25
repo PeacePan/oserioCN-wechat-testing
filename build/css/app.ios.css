@@ -7893,7 +7893,7 @@ ion-col[offset-70] {
   margin-left: 0.75rem;
   margin-right: 0.75rem; }
   .page-home .user-avatar ion-avatar {
-    margin: 1rem 3rem 1rem 1.4rem;
+    margin: 1rem 2rem 1rem 1.4rem;
     min-width: 6rem;
     min-height: 6rem; }
     .page-home .user-avatar ion-avatar img {
@@ -7922,8 +7922,7 @@ ion-col[offset-70] {
   padding-left: 1.4rem; }
 
 .page-home .alldata-table .watch-row {
-  position: absolute;
-  height: 9.8rem; }
+  position: absolute; }
   .page-home .alldata-table .watch-row ion-col {
     border-right: none;
     border-left: none;

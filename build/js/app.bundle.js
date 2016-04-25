@@ -808,15 +808,15 @@ var PageWeightTrendy = (function () {
         this.pages = [{
                 title: this.strs.Noun.BMI,
                 component: bmi_intro_1.PageBMIIntro,
-                hash: custom_routing_1.CustomRouting.table.bmiIntro
+                hash: this.routing.table.bmiIntro
             }, {
-                title: this.strs.Noun.BodyFat,
+                title: this.strs.Noun.BoneMass,
                 component: bone_mass_intro_1.PageBoneMassIntro,
-                hash: custom_routing_1.CustomRouting.table.boneMassIntro
+                hash: this.routing.table.boneMassIntro
             }, {
                 title: this.strs.Noun.MuscleMass,
                 component: muscle_mass_intro_1.PageMuscleMassIntro,
-                hash: custom_routing_1.CustomRouting.table.muscleMassIntro
+                hash: this.routing.table.muscleMassIntro
             }];
     }
     PageWeightTrendy.prototype.ngAfterViewInit = function () {
@@ -914,6 +914,12 @@ var TabHome = (function () {
             }
             if (!this.userProfile.headimgurl) {
                 this.userProfile.headimgurl = 'img/avatar-default-male.png';
+            }
+            if (!this.userProfile.age) {
+                this.userProfile.age = 18;
+            }
+            if (!this.userProfile.height) {
+                this.userProfile.height = 170;
             }
         }
         this.isOnWeixin = service_wechat_1.Wechat.sdk.isOnWeixin;
